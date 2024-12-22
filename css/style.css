@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 60px;
+    perspective: 700px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+section  , .front , .back {
+    width:  260px;
+    height: 300px;
+    background-color: rgb(250, 206, 206);
+    float: left;
+    font-size: 20px;
+    /* margin-left: 60px; */
+}
+section {
+    margin: auto;
+    position: relative;
+    transition: all  2s ;
+    transform-style: preserve-3d;
+    margin-left: 90px;
+    margin-top: 50px;
+}
+
+.front , .back {
+    position: absolute;
+}
+.front {
+    z-index: 1 ;
+    background-color: blue;
+    backface-visibility:  hidden ;
+    /* background-image: url(../Images/trainer-1.jpg); */
+    background-size: cover;
+}
+
+section:hover {
+    transform: rotateY(180deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+}
